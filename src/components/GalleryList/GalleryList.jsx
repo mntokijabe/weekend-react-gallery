@@ -7,7 +7,7 @@ function GalleryList ({galleryList, getGalleryList}) {
 
 
     return(
-        <div data-testid="galleryList" className='itemArea'>
+        <div data-testid="galleryList" className='itemCard'>
             {galleryList.map((item) => {
             return (
             <GalleryItem
