@@ -25,6 +25,7 @@ header h1 {
 }
 
 button {
+    font-size: medium;
     align-content: center;
     border-radius: 15%;
     margin-left: 15px;
