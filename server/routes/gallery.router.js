@@ -43,4 +43,26 @@ router.get('/', (req, res) => {
     })
 });
 
+router.post('/', (req, res) => {
+  console.log(req.body)
+  const queryText = `
+    INSERT INTO "gallery"
+    ("url","title", "description")
+    VALUES 
+    ($1, $2, $3);`
+  const queryValues = [
+    req.body.itemUrl,
+    req.body.itemTitle,
+    req.body.itemDescription]
+
+  pool.query(queryText, queryValues)
+  .then((dbRes) => {
+    res.sendStatus(200)
+  })
+  .catch((dbErr) => {
+    console.log('error inserting new pic into database',dbErr);
+    res.sendStatus(500)
+  })
+})
+
 module.exports = router;

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 import GalleryList from '../GalleryList/GalleryList.jsx';
 import Header from '../Header/Header.jsx';
+import AddItemForm from '../AddItemForm/AddItemForm.jsx';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         <Header />
         <main>
           <GalleryList galleryList={galleryList} getGalleryList={getGalleryList} />
-
+          <AddItemForm getGalleryList={getGalleryList} />
         </main>
       </div>
     );
