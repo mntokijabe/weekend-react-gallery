@@ -10,5 +10,7 @@ INSERT INTO "gallery"
 ("url", "title", "description")
 VALUES
 ('images/goat_small.jpg', 'Goat!', 'Photo of a goat taken at Glacier National Park.'),
-('images/goat_stache.png', 'Goat Stache!', 'Photo of a mustachioed goat taken at Glacier National Park.');
+('images/goat_stache.png', 'Goat Stache!', 'Photo of a mustachioed goat taken at Glacier National Park.')
+('images/family.jpeg', 'Family!', 'Photo of my family.'),
+('images/rva_sunset.jpeg', 'RVA Sunset', 'The last picture before we left Kenya'),;
   

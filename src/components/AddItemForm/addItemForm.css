@@ -1,0 +1,23 @@
+.formSubmit {
+    font-size: large;
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(255, 254, 216);
+}
+input {
+    font-size: medium;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+label {
+    font-size: large;
+    margin-left: 5px;
+}
+.formSubmit button  {
+    width:60px;
+    margin-left: 15px;
+    margin-bottom: 15px;;
+    background-color: aquamarine;
+    
+}
