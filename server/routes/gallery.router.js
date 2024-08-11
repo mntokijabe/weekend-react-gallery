@@ -65,4 +65,18 @@ router.post('/', (req, res) => {
   })
 })
 
+router.delete ('/:id', (req, res) => {
+  const queryText = `
+    DELETE FROM "gallery"
+    WHERE "id" = $1;`
+  const queryValue = [req.params.id];
+  pool.query(queryText, queryValue)
+  .then((dbRes) => {
+    res.sendStatus(201)
+  })
+  .catch((dbErr) => {
+    console.log('database error when deleting item',dbErr)
+    res.sendStatus(500);
+  })
+})
 module.exports = router;
