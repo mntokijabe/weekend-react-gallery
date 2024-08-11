@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import LikeButton from './LikeButton';
+import DeleteButton from './DeleteButton.jsx';
 
 
 function GalleryItem({ item, getGalleryList }) {
@@ -39,6 +40,7 @@ const displayItem = displayImage ?
          <h2>{item.title}</h2>
          <span> {displayItem}</span> 
          <LikeButton key={item.id} item={item} getGalleryList={getGalleryList} /> 
+         <DeleteButton item={item} getGalleryList={getGalleryList} /> 
         </div>
     )
 }
