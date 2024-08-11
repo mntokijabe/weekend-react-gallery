@@ -11,13 +11,24 @@ main {
     padding:4px;
     height: auto;
 }
-
+header h1 {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: url('../public/images/background.jpg');
+    background-size: 250px;
+    background-repeat: repeat;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+  }
 .itemCard {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-evenly;
+    padding-bottom: 10px;;
 }
 
 
@@ -42,6 +53,24 @@ main {
 .blue {
     background-color: rgb(163, 218, 245);
     text-decoration: line-through;
+}
+
+.formSubmit {
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(229, 229, 229);
+}
+input {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+.formSubmit button  {
+    width:45px;
+    margin-left: 15px;
+    margin-bottom: 15px;;
+    background-color: aquamarine;
+    
 }
 button {
     align-content: center;
