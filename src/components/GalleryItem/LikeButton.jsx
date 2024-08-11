@@ -50,7 +50,10 @@ function LikeButton ({item, getGalleryList}) {
    
 
     return (
-        <button data-testid="like" onClick={toggleStatus}>{displayHeart} {item.likes}</button>
+        <>
+        <button className={likeIncreased ? 'red':'blue'} data-testid="like" onClick={toggleStatus}>LIKE</button> 
+        <span>  {displayHeart} {item.likes}</span>
+        </>
     )
 }
 
