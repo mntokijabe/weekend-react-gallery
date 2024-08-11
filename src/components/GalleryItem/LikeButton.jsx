@@ -1,15 +1,14 @@
 import {useState} from 'react';
 import axios from 'axios';
+import './likeButton.css'
 
 function LikeButton ({item, getGalleryList}) {
     let [likeIncreased, setLikeIncreased] = useState(true);
-
 
     const toggleStatus = () => {
         setLikeIncreased(!likeIncreased)
         likeUpdate()
     }
-
 
     const likeUpdate = () =>{
         console.log(item.id)
@@ -46,9 +45,6 @@ function LikeButton ({item, getGalleryList}) {
     const displayHeart = item.likes > 0 ? 
         (<span>❤️</span>):(<span>♡</span>)
     
-
-   
-
     return (
         <>
         <button className={likeIncreased ? 'red':'blue'} data-testid="like" onClick={toggleStatus}>LIKE</button> 
@@ -56,6 +52,5 @@ function LikeButton ({item, getGalleryList}) {
         </>
     )
 }
-
 
 export default LikeButton;

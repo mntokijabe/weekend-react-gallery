@@ -1,0 +1,8 @@
+.red {
+    background-color: rgb(255, 9, 9);
+    color: white;
+}
+.blue {
+    background-color: rgb(163, 218, 245);
+    text-decoration: line-through;
+}

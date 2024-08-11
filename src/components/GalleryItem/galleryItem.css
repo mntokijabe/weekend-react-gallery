@@ -1,0 +1,23 @@
+.picContainer {
+    border: 1px whitesmoke solid;
+    border-radius: 10%;
+    margin-top:10px;
+    height: 225px;
+    background-color: rgb(236, 243, 247);
+    align-items: flex-start;
+}
+
+
+.displayItem {
+    display:block;
+    width:150px;
+    height:150px;
+}
+
+img {
+    display: block;
+    max-width:150px;
+    max-height:150px;
+    object-fit: contain;
+    justify-content: center;
+  }

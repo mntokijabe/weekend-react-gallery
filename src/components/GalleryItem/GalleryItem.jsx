@@ -1,10 +1,7 @@
-// import '../App/App.css';
-// import DeleteButton from '../DeleteButton/DeleteButton';
 import { useState } from 'react';
-import axios from 'axios';
 import LikeButton from './LikeButton';
 import DeleteButton from './DeleteButton.jsx';
-
+import './galleryItem.css'
 
 function GalleryItem({ item, getGalleryList }) {
     let [displayImage, setDisplayImage] = useState(false);
@@ -13,8 +10,7 @@ function GalleryItem({ item, getGalleryList }) {
 const toggleStatus = () => {
         setDisplayImage(!displayImage)
     }
-
-    
+ 
 const displayItem = displayImage ?
     (<span 
         data-testid="toggle" 
@@ -32,8 +28,6 @@ const displayItem = displayImage ?
         src={item.url}/>
     
     )
-
-
 
     return(
         <div data-testid="galleryItem" className="picContainer">
