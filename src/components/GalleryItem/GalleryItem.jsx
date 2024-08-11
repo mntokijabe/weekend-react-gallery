@@ -37,7 +37,7 @@ const displayItem = displayImage ?
     return(
         <div data-testid="galleryItem" className="picContainer">
          <h2>{item.title}</h2>
-         {displayItem} 
+         <span> {displayItem}</span> 
          <LikeButton key={item.id} item={item} getGalleryList={getGalleryList} /> 
         </div>
     )

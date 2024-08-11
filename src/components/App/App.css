@@ -1,0 +1,58 @@
+main {
+    background-image: url('../public/images/background.jpg');
+    object-fit: cover;
+    background-size: 100%;
+}
+
+.banner-header {
+    background-color: beige;
+    text-align: center;
+    height:4em;
+    padding:4px;
+    height: auto;
+}
+
+.itemCard {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+
+.picContainer {
+    border: 1px whitesmoke solid;
+    border-radius: 10%;
+    margin-top:10px;
+    height: 225px;
+    background-color: rgb(236, 243, 247);
+}
+
+
+.displayItem {
+    display:block;
+    width:150px;
+    height:150px;
+}
+.red {
+    background-color: rgb(255, 9, 9);
+    color: white;
+}
+.blue {
+    background-color: rgb(163, 218, 245);
+    text-decoration: line-through;
+}
+button {
+    align-content: center;
+    border-radius: 15%;
+}
+
+
+img {
+  display: block;
+  max-width:150px;
+  max-height:150px;
+  object-fit: contain;
+  justify-content: center;
+}
