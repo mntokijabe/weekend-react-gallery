@@ -2,29 +2,12 @@
 // import DeleteButton from '../DeleteButton/DeleteButton';
 import { useState } from 'react';
 import axios from 'axios';
-
+import LikeButton from './LikeButton';
 
 
 function GalleryItem({ item, getGalleryList }) {
     let [displayImage, setDisplayImage] = useState(false);
 
-    // const handleNameChange = (e) => {
-    //     axios({
-    //         method: `PATCH`,
-    //         url: `/api/list/${item.id}`,
-    //         data: {
-    //             itemName: e.target.value,
-    //             itemQuantity: currentQuant,
-    //             itemUnit: currentUnit
-    //         }
-    //     })
-    //         .then(res => {
-    //             setCurrentName(e.target.value)
-    //         })
-    //         .catch(err => {
-    //             console.log(`Err in handleNameChange: ${err}`)
-    //         })
-    // }
 
 const toggleStatus = () => {
         setDisplayImage(!displayImage)
@@ -37,6 +20,7 @@ const displayItem = displayImage ?
         onClick={toggleStatus} 
         className="displayItem">
         {item.description}
+   
      </span>
     )
     :
@@ -45,6 +29,7 @@ const displayItem = displayImage ?
         onClick={toggleStatus} 
         className="displayItem" 
         src={item.url}/>
+    
     )
 
 
@@ -52,7 +37,8 @@ const displayItem = displayImage ?
     return(
         <div data-testid="galleryItem" className="picContainer">
          <h2>{item.title}</h2>
-         {displayItem}  
+         {displayItem} 
+         <LikeButton key={item.id} item={item} getGalleryList={getGalleryList} /> 
         </div>
     )
 }
